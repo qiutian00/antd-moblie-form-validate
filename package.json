@@ -1,7 +1,7 @@
 {
   "name": "sg-mobile-form-validate",
   "version": "0.0.1",
-  "description": "sinobest sinogear mobile form validate, base rc-from, ant-mobile.",
+  "description": "antd mobile form validate, base rc-from, ant-mobile.",
   "main": "lib/FormItems.js",
   "scripts": {
     "build": "webpack --config ./scripts/webpack.prod.config.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.ggjs.sinobest.cn/liwen03864/sg-moible-form-validate"
+    "url": ""
   },
   "keywords": [
     "sinogear",
