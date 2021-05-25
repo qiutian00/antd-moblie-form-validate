@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config ./scripts/webpack.prod.config.js",
     "dev": "webpack-dev-server --config ./scripts/webpack.dev.config.js",
+    "release": "npm run build && npm publish --registry http://ggjs-app-03.hnisi.com.cn:8090 && rimraf lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -41,8 +42,6 @@
     "webpack-node-externals": "^2.5.0"
   },
   "dependencies": {
-    "@babel/core": "^7.10.4",
-    "@hot-loader/react-dom": "^16.13.0",
     "antd-mobile": "^2.2.12",
     "rc-form": "^2.4.12",
     "react": "^16.13.1",
