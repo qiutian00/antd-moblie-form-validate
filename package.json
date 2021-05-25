@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config ./scripts/webpack.prod.config.js",
     "dev": "webpack-dev-server --config ./scripts/webpack.dev.config.js",
-    "release": "npm run build && npm publish --registry http://ggjs-app-03.hnisi.com.cn:8090 && rimraf lib",
+    "release": "npm run build && npm publish --registry https://registry.npmjs.org/ && rimraf lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
