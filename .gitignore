@@ -42,7 +42,7 @@ dist
 *.html
 *.windi
 *.d.ts
-src/**/*.js
+# src/**/*.js
 example/**/*.js
 lib/*
 
