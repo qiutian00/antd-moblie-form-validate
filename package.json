@@ -1,0 +1,22 @@
+{
+  "name": "sg-mobile-form-validate",
+  "version": "0.0.1",
+  "description": "sinobest sinogear mobile form validate, base rc-from, ant-mobile.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.ggjs.sinobest.cn/liwen03864/sg-moible-form-validate"
+  },
+  "keywords": [
+    "sinogear",
+    "mobile",
+    "rc-form",
+    "antd-moible",
+    "form"
+  ],
+  "author": "liwen03864",
+  "license": "MIT"
+}
