@@ -1,5 +1,5 @@
 ## sg-moible-form-validate
-sinobest sinogear mobile form validate, base rc-from, ant-mobile.
+ant mobile form validate, base rc-from, ant-mobile.
 
 ## 注意：
 1.entry的入口文件位置，由开发环境的src/index.js改成了组件的出口src/components/index.js，表示此处只负责输出组件。
