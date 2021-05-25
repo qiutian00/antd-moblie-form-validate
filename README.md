@@ -1,4 +1,4 @@
-## sg-moible-form-validate
+## antd-moible-form-validate
 ant mobile form validate, base rc-from, ant-mobile.
 
 ## 注意：
