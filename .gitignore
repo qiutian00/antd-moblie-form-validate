@@ -44,6 +44,7 @@ dist
 *.d.ts
 src/**/*.js
 example/**/*.js
+lib/*
 
 # Don't ignore example files
 !test/assets/**
