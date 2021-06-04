@@ -1,30 +1,52 @@
 import React, { Component } from 'react';
 import { TextareaItem, Toast } from 'antd-mobile';
 
-import styles from './FormItems.less';
+import './FormItems.css';
 
 class Index extends Component {
 
   renderFormItem = () => {
-    const { form = {}, columnName = 'notFound', rules = [], WrapperItem = TextareaItem } = this.props;
+    const {
+      form = {},
+      columnName = 'notFound',
+      rules = [],
+      WrapperItem = TextareaItem,
+      error,
+      onErrorClick,
+      eventFunc,
+      initialValue = ''
+    } = this.props;
     const { getFieldProps, getFieldError } = form;
     const isRequired = !!rules.find((item) => {
       return item.required === true;
     });
+    // console.log("渲染：", this.props.title, this.props.WrapperItem);
+    const componentProps = {
+      ...this.props
+    }
+    delete componentProps.WrapperItem;
+    delete componentProps.columnName;
     return (
-      <div className={styles.container}>
-        { isRequired ? <span className={styles.requireText}>*</span> : ''}
+      <div className="container">
+        { isRequired ? <span className="requireText">*</span> : ''}
         <WrapperItem
           {...getFieldProps(columnName, {
+            ...eventFunc,
+            initialValue,
             rules,
           })}
-          error={!!getFieldError(columnName)}
+          error={error || !!getFieldError(columnName)}
           onErrorClick={() => {
-            Toast.fail(getFieldError(columnName).join('、'), 2);
+            if (onErrorClick) {
+              onErrorClick();
+            }
+            if (getFieldError(columnName)) {
+              Toast.fail(getFieldError(columnName).join('、'), 2);
+            }
           }}
-          {...this.props}
+          {...componentProps}
         />
-        {getFieldError(columnName) ? <span className={styles.errorText}>{getFieldError(columnName).join(',')}</span> : null}
+        {error || getFieldError(columnName) ? <span className="errorText">{error || getFieldError(columnName).join(',')}</span> : null}
       </div>
     )
   }
@@ -32,27 +54,6 @@ class Index extends Component {
   render() {
     return this.renderFormItem();
   }
-
-  // only for test
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-  //     btnTxt:'Login'
-  //   }
-  // }
-
-  // renderFunc = () => {
-  //   const { btnTxt = '测试' }=this.state;
-  //   return(
-  //     <div className='button-container' onClick={()=>{ this.setState({btnTxt:btnTxt==='Login'?'Logout':'Login'})}}>
-  //       <span>{btnTxt}</span>
-  //     </div>
-  //   );
-  // }
-
-  // render() {
-  //   return this.renderFunc();
-  // }
 }
 
 export default Index;
