@@ -24,7 +24,7 @@ const App = (props) => {
       <FormItems
         columnName="dyzl"
         rules={[
-          { required: true, message: '请输入必填项动用指令' },
+          { required: true, message: '请输入必填项固定格式' },
           { regexp: /^\d+$/, pattern: /^粤应急函.+$/, message: '请输入正确格式：粤应急函〔2021〕001号'}
         ]}
         // error={basicIsCanEdit || validateDyzlResult.success ? '' : validateDyzlResult.message}
@@ -33,103 +33,46 @@ const App = (props) => {
         //     Toast.fail(validateDyzlResult.message);
         //   }
         // })}
-        title="动用指令"
-        placeholder="请输入动用指令"
+        title="固定格式"
+        placeholder="请输入固定格式"
         autoHeight
         disabled={basicIsCanEdit}
         form={form}
         WrapperItem={TextareaItem}
       />
       <FormItems
-        title="要求达到时间"
+        title="时间"
         columnName="yqddsjTime"
         // initialValue={ new Date(viewDyzlDetailData?.data?.yqddsj ?? Date.now()) }
-        rules={[{ required: true, message: '请输入必填要求达到时间' }]}
-        placeholder="请输入要求到达时间"
+        rules={[{ required: true, message: '请输入必填时间' }]}
+        placeholder="请输入时间"
         autoHeight
         disabled={basicIsCanEdit}
         form={form}
         WrapperItem={DatePicker}
         format="yyyy-MM-dd HH:mm:ss"
       >
-        <List.Item arrow="horizontal" className="dateList" disabled={basicIsCanEdit}>要求达到时间</List.Item>
+        <List.Item arrow="horizontal" className="dateList" disabled={basicIsCanEdit}>时间</List.Item>
       </FormItems>
-      {
-        !basicIsCanEdit
-          ?
-          (
-            <FormItems
-              title="目的地"
-              columnName="mdd"
-              // initialValue={[{selectedOptions: [viewDyzlDetailData?.data?.mdd, viewDyzlDetailData?.data?.mddmc]}]}
-              rules={[{ required: true, message: '请选择目的地' }]}
-              placeholder="请选择目的地"
-              extra="选择目的地"
-              autoHeight
-              disabled={basicIsCanEdit}
-              form={form}
-              // WrapperItem={SGDictSelect}
-              className="sgDict"
-              multiple={false}
-              wrap
-              showSearch
-              multiSelect={false}
-              isSingle={false}
-              searchPlaceholder="输入名称搜索"
-              data={typeof areaTreeData || []}
-              keepSearch
-              // onSearch={this.handleSearchMdd}
-            />
-          )
-          :
-          (
-            <FormItems
-              title="目的地"
-              columnName="mdd"
-              // initialValue={ viewDyzlDetailData?.data?.mddmc ?? ''}
-              rules={[{ required: true, message: '请选择目的地' }]}
-              placeholder="请选择目的地"
-              autoHeight
-              disabled={basicIsCanEdit}
-              form={form}
-            />
-          )
-      }
       <FormItems
-        title="接收人"
+        title="人名"
         columnName="jsr"
         // initialValue={ viewDyzlDetailData?.data?.jsr ?? ''}
-        rules={[{ required: true, message: '请输入接收人' }]}
-        placeholder="请输入接收人"
+        rules={[{ required: true, message: '请输入人名' }]}
+        placeholder="请输入人名"
         autoHeight
         disabled={basicIsCanEdit}
         form={form}
       />
       <FormItems
-        title="接收人电话"
+        title="电话"
         columnName="jsr_lxdh"
         // initialValue={ viewDyzlDetailData?.data?.jsr_lxdh ?? ''}
         rules={[
-          { required: true, message: '请输入接收人电话' },
+          { required: true, message: '请输入电话' },
           { pattern: /^1[3|4|5|7|8][0-9]{9}$/, message: '请输入正确的手机号' }
         ]}
-        placeholder="接收人电话"
-        autoHeight
-        disabled={basicIsCanEdit}
-        form={form}
-      />
-      <FormItems
-        columnName="ycy"
-        title="押车员"
-        // initialValue={userMsg?.userName ?? ''}
-        autoHeight
-        disabled={basicIsCanEdit}
-        form={form}
-      />
-      <FormItems
-        columnName="ycy_lxdh"
-        title="押车员电话"
-        // initialValue={userMsg?.phoneNumber ?? ''}
+        placeholder="电话"
         autoHeight
         disabled={basicIsCanEdit}
         form={form}
