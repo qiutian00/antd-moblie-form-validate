@@ -1,6 +1,6 @@
 {
   "name": "antd-mobile-form-validate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "antd mobile form validate, base rc-from, ant-mobile.",
   "main": "lib/FormItems.js",
   "scripts": {
@@ -11,10 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/qiutian00/antd-moblie-form-validate.git"
   },
   "keywords": [
-    "sinogear",
     "mobile",
     "rc-form",
     "antd-moible",
@@ -49,6 +48,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "author": "liwen03864",
+  "author": "lala",
   "license": "MIT"
 }
