@@ -1,6 +1,6 @@
 {
   "name": "antd-mobile-form-validate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "antd mobile form validate, base rc-from, ant-mobile.",
   "main": "lib/FormItems.js",
   "scripts": {
