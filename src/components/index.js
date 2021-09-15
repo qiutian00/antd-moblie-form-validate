@@ -1,3 +1,3 @@
-import FormItems from './FormItems';
+import Index from './FormItems';
 
-export default { FormItems };
+export const FormItems = Index;
