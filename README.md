@@ -13,13 +13,19 @@ yarn add sg-moible-form
 ### Usage
 
 ```bash
+import { FormItems } from 'antd-mobile-form-validate';
+```
+
+### [Example](./src/index.js)
+
+```bash
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { TextareaItem, DatePicker, List } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.css';
 import { createForm } from 'rc-form';
-import FormItems from './components/FormItems';
+import { FormItems } from 'antd-mobile-form-validate';
 import './index.css';
 
 const App = (props) => {
